@@ -93,30 +93,38 @@ var app = angular.module("app", ['angularUtils.directives.dirPagination', "pathg
            data: {
              labels: ["25,000","50,000", "75,000", "100,000", "125,000","150,000"],
              datasets: [{
-               label: 'Salary Range',
+               label: 'Salary',
                data:[salary25000, salary50000, salary75000, salary100000, salary125000, salary150000],
                backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132,1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255,1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderColor: '#777',
+            borderWidth: 1,
+            hoverBorderwidth: 3,
+            hoverBorderColor: '#000'
 
              }]
            },
            options: {
-                responsive: true
+             title:{
+               display: true,
+               text: 'Employee Salary Range',
+               fontSize: 25
+             },
+             legend:{
+               display: true,
+              position: 'right',
+              labels: { 
+                fontColor: '#000'
+              }
+             },
+            beginAtZero: true,
+            responsive: true
 
            }
           
